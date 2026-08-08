@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% block title %}Satyam Kumar Portfolio{% endblock %}
+
+{% block content %}
+
+<section id="home" class="vh-100 d-flex align-items-center bg-light">
+    <div class="container text-center text-md-start">
+        <h1 class="display-4 fw-bold">Hi, I'm <span class="text-primary">Satyam Kumar</span></h1>
+        <h3 class="mt-3"><span class="typing-text"></span></h3>
+        <p class="lead mt-3 text-muted">
+            I analyze data, build machine learning models, and create intelligent applications to solve real-world problems.
+        </p>
+
+        <div class="mt-4">
+            <a href="#projects" class="btn btn-primary me-2">View Projects</a>
+            <a href="{{ url_for('static', filename='SatyamResume.pdf') }}" download class="btn btn-outline-secondary">
+                Download Resume <i class="fas fa-download"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="py-5 reveal">
+    <div class="container">
+        <h2 class="fw-bold mb-4">About Me</h2>
+        <p class="text-muted">
+            I am currently pursuing MCA and building strong skills in Data Science, Machine Learning, and Web Development.
+            I enjoy working on real-world projects like plant disease detection systems and data-driven dashboards.
+        </p>
+        <p class="text-muted">
+            My goal is to become a Data Scientist and work on impactful AI solutions.
+        </p>
+    </div>
+</section>
+
+<section id="skills" class="py-5 bg-light reveal">
+    <div class="container">
+        <h2 class="fw-bold text-center mb-4">Skills</h2>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <i class="fab fa-python fa-3x text-primary"></i>
+                <h5 class="mt-3">Python & ML</h5>
+                <p>Pandas, NumPy, Scikit-learn, TensorFlow</p>
+            </div>
+
+            <div class="col-md-4">
+                <i class="fas fa-database fa-3x text-primary"></i>
+                <h5 class="mt-3">SQL & Databases</h5>
+                <p>MySQL, PostgreSQL, Query Optimization</p>
+            </div>
+
+            <div class="col-md-4">
+                <i class="fas fa-code fa-3x text-primary"></i>
+                <h5 class="mt-3">Web Development</h5>
+                <p>HTML, CSS, JavaScript, Flask</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="py-5 reveal">
+    <div class="container">
+        <h2 class="fw-bold text-center mb-2">Featured Projects</h2>
+        <p class="text-center text-muted mb-5">
+            A selection of my recent work —
+            <a href="{{ url_for('projects') }}">view all projects →</a>
+        </p>
+
+        <div class="row g-4">
+            {% for project in projects %}
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100 project-card"
+                     data-title="{{ project.title }}"
+                     data-description="{{ project.description }}"
+                     data-image="{{ url_for('static', filename=project.image) }}"
+                     data-link="{{ project.link }}"
+                     data-category="{{ project.category }}">
+
+                    <div class="project-img-wrapper">
+                        <img src="{{ url_for('static', filename=project.image) }}"
+                             alt="{{ project.title }}"
+                             class="card-img-top project-img"
+                             onerror="this.onerror=null;this.src='{{ url_for('static', filename='images/projects/placeholder.jpg') }}';">
+                        <div class="project-overlay"><i class="fas fa-expand"></i></div>
+                    </div>
+
+                    <div class="card-body p-3">
+                        <span class="badge bg-primary-subtle text-primary mb-2">{{ project.category }}</span>
+                        <h5>{{ project.title }}</h5>
+                        <p class="text-muted small">{{ project.description }}</p>
+                        <a href="{{ project.link }}" target="_blank" class="btn btn-sm btn-primary" onclick="event.stopPropagation();">View Project</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="py-5 bg-light reveal">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-4">Contact Me</h2>
+        <p>Email: satyamkumar7912@gmail.com</p>
+
+        <div class="mt-3">
+            <a href="https://www.linkedin.com/in/satyamkumar0271" target="_blank" class="me-3"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="https://github.com/satyam0271" target="_blank" class="me-3"><i class="fab fa-github fa-2x"></i></a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
