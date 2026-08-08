@@ -30,24 +30,24 @@ PROJECTS = [
         "category": "Dashboards",
         "featured": True
     },
-    {
-        "id": 4,
-        "title": "Churn Prediction Model",
-        "description": "Machine learning model to predict customer churn using classification algorithms.",
-        "image": "images/churn-prediction.jpg",
-        "link": "#",
-        "category": "ML",
-        "featured": False
-    },
-        {
-        "id": 5,
-        "title": "testing101",
-        "description": "This is just for testing puprose.",
-        "image": "images/churn-prediction.jpg",
-        "link": "#",
-        "category": "WebApp",
-        "featured": False
-    }
+    # {
+    #     "id": 4,
+    #     "title": "Churn Prediction Model",
+    #     "description": "Machine learning model to predict customer churn using classification algorithms.",
+    #     "image": "images/churn-prediction.jpg",
+    #     "link": "#",
+    #     "category": "ML",
+    #     "featured": False
+    # },
+    #     {
+    #     "id": 5,
+    #     "title": "testing101",
+    #     "description": "This is just for testing puprose.",
+    #     "image": "images/churn-prediction.jpg",
+    #     "link": "#",
+    #     "category": "WebApp",
+    #     "featured": False
+    # }
 ]
 
 def get_home_projects(limit=3):
