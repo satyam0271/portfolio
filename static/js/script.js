@@ -25,9 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const textArray = [
         "Aspiring Data Scientist",
-        "Machine Learning Enthusiast",
-        "Data Analyst",
-        "AI/ML Developer"
+        "AI/ML Enthusiast",
+        "Data Analyst"
     ];
 
     let textIndex = 0;
