@@ -28,17 +28,17 @@ PROJECTS = [
         "image": "images/excel-dashboard.jpg",
         "link": "https://lnkd.in/p/dXc_xJjq",
         "category": "Dashboards",
+        "featured": False
+    },
+    {
+        "id": 4,
+        "title": "",
+        "description": "Interactive Power BI dashboard delivering sales, customer segmentation, and logistics intelligence across $2.26M in retail transactions.",
+        "image": "images/superstore.png",
+        "link": "https://lnkd.in/p/dMmadZNn",
+        "category": "Dashboards",
         "featured": True
     },
-    # {
-    #     "id": 4,
-    #     "title": "Churn Prediction Model",
-    #     "description": "Machine learning model to predict customer churn using classification algorithms.",
-    #     "image": "images/churn-prediction.jpg",
-    #     "link": "#",
-    #     "category": "ML",
-    #     "featured": False
-    # },
     #     {
     #     "id": 5,
     #     "title": "testing101",
