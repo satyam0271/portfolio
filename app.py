@@ -39,15 +39,15 @@ PROJECTS = [
         "category": "Dashboards",
         "featured": True
     },
-    #     {
-    #     "id": 5,
-    #     "title": "testing101",
-    #     "description": "This is just for testing puprose.",
-    #     "image": "images/churn-prediction.jpg",
-    #     "link": "#",
-    #     "category": "WebApp",
-    #     "featured": False
-    # }
+    {
+        "id": 5,
+        "title": "SuperStore Sales EDA",
+        "description": "The objective of this project is to understand sales performance, customer behavior, product-line performance, payment preferences, time-based sales patterns, profitability, and relationships between numerical variables.",
+        "image": "images/superstore_eda.jpg",
+        "link": "https://github.com/satyam0271/supermarket_sales_eda.git",
+        "category": "EDA",
+        "featured": False
+    }
 ]
 
 def get_home_projects(limit=3):
